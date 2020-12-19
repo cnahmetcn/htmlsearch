@@ -2,18 +2,17 @@ var x = 0;
 var sonuclar = Array();
 var kontrol = Array();
 
-function addresult(value, index, self)
+function addresult()
 {
-    self.indexOf(value) === index;
+    
     sonuclar[x] = document.getElementById("search").value; 
     x++;
-    var unique = sonuclar.filter(addresult);
     document.getElementById("search").value = "";
  
     var hr = "<hr/>";     
-    for (var i=0; i<unique.length; i++)
+    for (var i=0; i<sonuclar.length; i++)
     {
-        hr += unique[i] + "<br/>";
+        hr += sonuclar[i] + "<br/>";
     }
     document.getElementById("results").innerHTML = hr;
 }
